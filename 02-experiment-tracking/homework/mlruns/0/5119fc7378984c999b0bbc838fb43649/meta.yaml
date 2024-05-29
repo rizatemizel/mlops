@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5119fc7378984c999b0bbc838fb43649/artifacts
+end_time: 1716991501162
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5119fc7378984c999b0bbc838fb43649
+run_name: adaptable-doe-895
+run_uuid: 5119fc7378984c999b0bbc838fb43649
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716991488077
+status: 3
+tags: []
+user_id: codespace

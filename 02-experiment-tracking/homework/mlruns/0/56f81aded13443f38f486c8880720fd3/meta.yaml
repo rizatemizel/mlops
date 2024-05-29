@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/56f81aded13443f38f486c8880720fd3/artifacts
+end_time: 1716990431485
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 56f81aded13443f38f486c8880720fd3
+run_name: dashing-ox-582
+run_uuid: 56f81aded13443f38f486c8880720fd3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716990417864
+status: 3
+tags: []
+user_id: codespace

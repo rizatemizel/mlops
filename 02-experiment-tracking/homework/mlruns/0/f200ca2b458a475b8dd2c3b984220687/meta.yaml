@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f200ca2b458a475b8dd2c3b984220687/artifacts
+end_time: 1716990633176
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f200ca2b458a475b8dd2c3b984220687
+run_name: funny-quail-243
+run_uuid: f200ca2b458a475b8dd2c3b984220687
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716990620087
+status: 3
+tags: []
+user_id: codespace
