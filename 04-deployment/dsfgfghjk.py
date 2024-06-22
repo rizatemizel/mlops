@@ -1,33 +1,33 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[18]:
+# In[1]:
 
 
 get_ipython().system('pip freeze | grep scikit-learn')
 
 
-# In[19]:
+# In[2]:
 
 
 get_ipython().system('python -V')
 
 
-# In[20]:
+# In[ ]:
 
 
 import pickle
 import pandas as pd
 
 
-# In[21]:
+# In[ ]:
 
 
 with open('model.bin', 'rb') as f_in:
     dv, model = pickle.load(f_in)
 
 
-# In[22]:
+# In[ ]:
 
 
 categorical = ['PULocationID', 'DOLocationID']
@@ -45,17 +45,10 @@ def read_data(filename):
     return df
 
 
-# In[23]:
+# In[ ]:
 
 
-year = 2024
-month = 3
-
-
-# In[24]:
-
-
-df = read_data('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-03.parquet')
+df = read_data('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_????-??.parquet')
 
 
 # In[ ]:
@@ -64,54 +57,6 @@ df = read_data('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_
 dicts = df[categorical].to_dict(orient='records')
 X_val = dv.transform(dicts)
 y_pred = model.predict(X_val)
-
-
-# In[ ]:
-
-
-y_pred.std()
-
-
-# In[ ]:
-
-
-df['ride_id'] = f'{year:04d}/{month:02d}_' + df.index.astype('str')
-
-
-# In[ ]:
-
-
-df['preds'] = y_pred
-
-
-# In[ ]:
-
-
-df.head()
-
-
-# In[ ]:
-
-
-df_result = df[['ride_id','preds']]
-df_result.head()
-
-
-# In[ ]:
-
-
-output_file = '/workspaces/mlops/04-deployment/df_result.pqt'
-
-
-# In[ ]:
-
-
-df_result.to_parquet(
-    output_file,
-    engine='pyarrow',
-    compression=None,
-    index=False
-)
 
 
 # In[ ]:
